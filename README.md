@@ -120,3 +120,6 @@ Example
 ### Requirements
 * PHP >= 5.2.0
 * cURL
+
+
+Request: Please let us know your feedback and comments. If you have any questions or need a further assistance please contact us at hello@betaout.com.
