@@ -25,11 +25,53 @@ Usage
 -----
 Before calling any of the common methods you must create an instance of amplify class with valid API key, secret and project ID:
 
-
 ```php  
-    $amplifyObject = new Amplify('dummy_api_key','dummy_api_secret','dummy_project_id');
+    $amplifyObject = new Amplify('API_Key','API_Secret','Project_Id');
 ````
 
+1. Identifying a User
+---------------------
+Before calling any of the common methods you must create an instance of amplify class with valid API key, secret and project ID:
+
+```php  
+    $amplifyObject->identify(`Email_Address`,‘Name’);
+````
+
+Example
+```php  
+    $amplifyObject->identify(`sandeep@getamplify.com`,‘Sandeep’);
+````
+
+2. Sending an event
+-------------------
+Before calling any of the common methods you must create an instance of amplify class with valid API key, secret and project ID:
+
+Example
+```php  
+    $amplifyObject->event(
+                    `Email_Address`,
+                     array(
+                            'Event_Name' => array(
+                                                    'Property_Name'=>’Property_Value’,
+                                                    'Property2_Name'=>’Property2_Value’
+                                                )
+                            )
+                        );
+````
+
+Example
+```php  
+    $amplifyObject->event(
+                    `sandeep@getamplify.com`,
+                     array(
+                            'addtocart' => array(
+                                                    'product'=>’Samsung Note2’,
+                                                    'category'=>’Mobile’,
+                                                    'price'=>’456.78’
+                                                )
+                            )
+                        );
+````
 
 ### Requirements
 * PHP >= 5.2.0
