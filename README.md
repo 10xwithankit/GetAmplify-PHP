@@ -18,7 +18,7 @@ Installation
 Copy the SDK library file to a location within your web application's include path, and include it into any scripts that you wish to make API calls from.
 
 ```php
-    include 'getamplify-sdk.php';
+include 'getamplify-sdk.php';
 ````
 
 Usage
@@ -34,26 +34,25 @@ Before calling any of the common methods you must create an instance of amplify 
 Before calling any of the common methods you must create an instance of amplify class with valid API key, secret and project ID:
 
 ```php  
-    $amplifyObject->identify(`Email_Address`,‘Name’);
+    $amplifyObject->identify('Email_Address','Name');
 ````
 
 Example
 ```php  
-    $amplifyObject->identify(`sandeep@getamplify.com`,‘Sandeep’);
+    $amplifyObject->identify('sandeep@getamplify.com','Sandeep');
 ````
 
 2. Sending an event
 -------------------
 Before calling any of the common methods you must create an instance of amplify class with valid API key, secret and project ID:
 
-Example
 ```php  
     $amplifyObject->event(
-                    `Email_Address`,
+                    'Email_Address',
                      array(
                             'Event_Name' => array(
-                                                    'Property_Name'=>’Property_Value’,
-                                                    'Property2_Name'=>’Property2_Value’
+                                                    'Property_Name'=>'Property_Value',
+                                                    'Property2_Name'=>'Property2_Value'
                                                 )
                             )
                         );
@@ -62,12 +61,12 @@ Example
 Example
 ```php  
     $amplifyObject->event(
-                    `sandeep@getamplify.com`,
+                    'sandeep@getamplify.com',
                      array(
                             'addtocart' => array(
-                                                    'product'=>’Samsung Note2’,
-                                                    'category'=>’Mobile’,
-                                                    'price'=>’456.78’
+                                                    'product'=>'Samsung Note2',
+                                                    'category'=>'Mobile',
+                                                    'price'=>'456.78'
                                                 )
                             )
                         );
