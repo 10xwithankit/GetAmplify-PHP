@@ -70,8 +70,7 @@ Example
                         );
 ````
 
-3. Updating User Property
--------------------------
+### 3. Updating User Property
 You can use update() method for updating user properties. Any old value of the property will be replaced with new value 
 ```php  
     $amplifyObject->update(
@@ -93,7 +92,7 @@ Example
                           );
 ````
 
-### 3. Appending User Property
+### 4. Appending User Property
 You can use add() method for updating user properties. Any old value of the property will be replaced with new value 
 ```php  
     $amplifyObject->add(
