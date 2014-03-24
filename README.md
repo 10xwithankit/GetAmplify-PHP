@@ -18,10 +18,18 @@ Installation
 Copy the SDK library file to a location within your web application's include path, and include it into any scripts that you wish to make API calls from.
 
 ```php
-    <?php
-        include 'getamplify-sdk.php';
-    ?>
+    include 'getamplify-sdk.php';
 ````
+
+Usage
+-----
+Before calling any of the common methods you must create an instance of amplify class with valid API key, secret and project ID:
+
+
+```php  
+    $amplifyObject = new Amplify('dummy_api_key','dummy_api_secret','dummy_project_id');
+````
+
 
 ### Requirements
 * PHP >= 5.2.0
