@@ -31,7 +31,7 @@ Before calling any of the common methods you must create an instance of amplify 
 
 1. Identifying a User
 ---------------------
-Before calling any of the common methods you must create an instance of amplify class with valid API key, secret and project ID:
+A user is identified by its email address.
 
 ```php  
     $amplifyObject->identify('Email_Address','Name');
@@ -44,7 +44,7 @@ Example
 
 2. Sending an event
 -------------------
-Before calling any of the common methods you must create an instance of amplify class with valid API key, secret and project ID:
+You can send an event performed by the user with this method. You can also pass properties along with this event. All the existing properties will be updated with the new values passed.
 
 ```php  
     $amplifyObject->event(
@@ -61,16 +61,65 @@ Before calling any of the common methods you must create an instance of amplify 
 Example
 ```php  
     $amplifyObject->event(
-                    'sandeep@getamplify.com',
-                     array(
-                            'addtocart' => array(
-                                                    'product'=>'Samsung Note2',
-                                                    'category'=>'Mobile',
-                                                    'price'=>'456.78'
-                                                )
-                            )
+                            'sandeep@getamplify.com',
+                             array(
+                                    'addtocart' => array(
+                                                            'product'=>'Samsung Note2',
+                                                            'category'=>'Mobile',
+                                                            'price'=>'456.78'
+                                                        )
+                                    )
                         );
 ````
+
+3. Updating User Property
+-------------------------
+You can use update() method for updating user properties. Any old value of the property will be replaced with new value 
+```php  
+    $amplifyObject->update(
+                            'sandeep@getamplify.com',
+                                        array(
+                                                'Property_Name'=>'Property_Value',
+                                                'Property2_Name'=>'Property2_Value'
+                                              )
+                          );
+````
+Example
+```php  
+    $amplifyObject->update(
+                            'Email_Address',
+                                        array(
+                                                'country'=>'India',
+                                                'city'=>'Noida'
+                                              )
+                          );
+````
+
+3. Appending User Property
+-------------------------
+You can use add() method for updating user properties. Any old value of the property will be replaced with new value 
+```php  
+    $amplifyObject->event(
+                            'sandeep@getamplify.com',
+                                        array(
+                                                'Property_Name'=>'Property_Value',
+                                                'Property2_Name'=>'Property2_Value'
+                                              )
+                          );
+````
+Example
+```php  
+    $amplifyObject->add(
+                            'Email_Address',
+                                        array(
+                                                'comments'=>'1',
+                                                'shares'=>'1'
+                                              )
+                          );
+````
+
+
+
 
 ### Requirements
 * PHP >= 5.2.0
