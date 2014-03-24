@@ -1,4 +1,4 @@
-getamplify
+GetAmplify
 ==========
 
-GetAmplify PHP SDK for v1 API
+This SDK allows developers to easily use the GetAmplify API with PHP
