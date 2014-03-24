@@ -29,8 +29,7 @@ Before calling any of the common methods you must create an instance of amplify 
     $amplifyObject = new Amplify('API_Key','API_Secret','Project_Id');
 ````
 
-1. Identifying a User
----------------------
+### 1. Identifying a User
 A user is identified by its email address.
 
 ```php  
@@ -42,8 +41,7 @@ Example
     $amplifyObject->identify('sandeep@getamplify.com','Sandeep');
 ````
 
-2. Sending an event
--------------------
+### 2. Sending an event
 You can send an event performed by the user with this method. You can also pass properties along with this event. All the existing properties will be updated with the new values passed.
 
 ```php  
@@ -95,12 +93,11 @@ Example
                           );
 ````
 
-3. Appending User Property
--------------------------
+### 3. Appending User Property
 You can use add() method for updating user properties. Any old value of the property will be replaced with new value 
 ```php  
-    $amplifyObject->event(
-                            'sandeep@getamplify.com',
+    $amplifyObject->add(
+                            'Email_Address',
                                         array(
                                                 'Property_Name'=>'Property_Value',
                                                 'Property2_Name'=>'Property2_Value'
@@ -110,7 +107,7 @@ You can use add() method for updating user properties. Any old value of the prop
 Example
 ```php  
     $amplifyObject->add(
-                            'Email_Address',
+                            'sandeep@getamplify.com',
                                         array(
                                                 'comments'=>'1',
                                                 'shares'=>'1'
