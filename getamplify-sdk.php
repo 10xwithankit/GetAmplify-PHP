@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Amplify is a  customer relationship management  for web app owners
+ * GetAmplify.com is a  marketing automation software and enagegment platform
  * 
  * This library provides connectivity with the Amplify API 
  * 
@@ -19,7 +19,7 @@
  * <code>
  * <?php
  * $amplify = new Amplify('dummy_app_key','dummy_app_secret','dummy_project_id');
- * amplify->identify(`sandeep@socialaxishq.com`,‘Sandeep’);
+ * amplify->identify('sandeep@socialaxishq.com','Sandeep');
  *
  * ?>
  * </code>
@@ -618,7 +618,7 @@ class Amplify {
 
     /*
      * Identify system user if it unknowm leave parameter blank
-     * amplify->identify(`sandeep@socialaxishq.com`,‘Sandeep’);
+     * amplify->identify('sandeep@socialaxishq.com','Sandeep');
      * Replace with name and email of current user
      */
 
@@ -635,7 +635,7 @@ class Amplify {
 
     /*
      * add new event with properties    
-     * $amplify->event(`sandeep@socialaxishq.com`,array('addtocart'=>array('product'=>’Samsung Note2’,'category'=>’Mobile’,'price'=>’456.78’)));
+     * $amplify->event('sandeep@socialaxishq.com',array('addtocart'=>array('product'=>'Samsung Note2','category'=>'Mobile','price'=>'456.78')));
      */
 
     public function event($email, $eventArray) {
@@ -645,7 +645,7 @@ class Amplify {
 
     /*
      * add user  properties    
-     * $amplify->update(`sandeep@socialaxishq.com`,array('country'=>’India’,'city'=>’Noida’));
+     * $amplify->update('sandeep@socialaxishq.com',array('country'=>'India','city'=>'Noida'));
      */
 
     public function update($email, $propetyArray) {
@@ -655,7 +655,7 @@ class Amplify {
 
     /*
      * add new user  properties    
-     * $amplify->add(`sandeep@socialaxishq.com`,array('total_comments'=>’5’,'total_shares'=>’4’));
+     * $amplify->add('sandeep@socialaxishq.com',array('total_comments'=>'5','total_shares'=>'4'));
      */
 
     public function add($email, $propetyArray) {
