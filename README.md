@@ -129,15 +129,27 @@ Yes, you can. Here's an example.
                         );
 ````
 
-### 2. To identify an user, can I send something else instead of an email address, like UserID?
+### 2. Can I send multiple events in a same call?
+Yes, you can. Here's an example.
+```php  
+    $amplifyObject->event(
+                            'sandeep@getamplify.com',
+                             array(
+                                    'add_to_cart' => array(),
+                                    'add_to_WishList' => array()
+                                    )
+                        );
+````
+
+### 3. To identify an user, can I send something else instead of an email address, like UserID?
 No, you have to send an email address to identify him as an "Identified User". 
 For any user, if email address is not known, it will be treated as Visitor. Though every visitor also had properties and events like Identified User. 
 
 
-### 3. What if I don't have an email address, how to I call event or add/update properties.
-You can use same functions without identifying the user. We create cookie for every visitor and store a unique alias id for that user. This cookie will be read and maintained by getamplify-sdk itself.
+### 4. What if I don't have an email address, how to I call event or add/update properties.
+You can use same functions without identifying the user. We create cookie for every visitor and store an unique alias id for that user. This cookie will be read and maintained by getamplify-sdk itself.
 
-Here's and example. (Instead of email addess, blank value is passed
+Here's and example. (Instead of email addess, blank value is passed)
 Example
 ```php  
     $amplifyObject->event(
