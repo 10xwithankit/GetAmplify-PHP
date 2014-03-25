@@ -124,19 +124,19 @@ Yes, you can. Here's an example.
     $amplifyObject->event(
                             'sandeep@getamplify.com',
                              array(
-                                    'addtocart' => array()
+                                    'addtocart' => array()  //Empty Array
                                     )
                         );
 ````
 
-### 2. Can I send multiple events in a same call?
+### 2. Can I send multiple events via a single call?
 Yes, you can. Here's an example.
 ```php  
     $amplifyObject->event(
                             'sandeep@getamplify.com',
                              array(
-                                    'add_to_cart' => array(),
-                                    'add_to_WishList' => array()
+                                    'add_to_cart' => array(),  //Event1
+                                    'add_to_WishList' => array()  //Event2
                                     )
                         );
 ````
