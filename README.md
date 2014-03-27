@@ -124,7 +124,7 @@ Yes, you can. Here's an example.
     $amplifyObject->event(
                             'sandeep@getamplify.com',
                              array(
-                                    'addtocart' => array()  //Empty Array
+                                    'addtocart' => false //property array should be false
                                     )
                         );
 ````
@@ -135,8 +135,8 @@ Yes, you can. Here's an example.
     $amplifyObject->event(
                             'sandeep@getamplify.com',
                              array(
-                                    'add_to_cart' => array(),  //Event1
-                                    'add_to_WishList' => array()  //Event2
+                                    'add_to_cart' => false,  //Event1
+                                    'add_to_WishList' => false  //Event2
                                     )
                         );
 ````
