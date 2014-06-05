@@ -116,6 +116,24 @@ Example
 
 
 
+E-commerce function
+--------------------
+If you are running a B2C or e-commerce company, these functions are essential and shoudl be used. 
+
+
+### 1. Customer Action
+A customer can have following action with products. Replace them from ‘action_names’
+
+1. viewed,
+2. purchased,
+3. wishlist,
+4. add_to_cart,
+5. reviewed,
+6. shared,
+7. completed
+8. removed_from_cart
+
+
 FAQs
 -----
 ### 1. Can I send an event without sending properties?
