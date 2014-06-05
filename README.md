@@ -170,6 +170,50 @@ Example
 ````
 
 
+
+
+### 2. New Product is Added
+You can send information about any new product through this function.
+
+```php  
+    $amplifyObject->add(
+                            'Email_Address',
+                                        array(
+                                                'Property_Name'=>'Property_Value',
+                                                'Property2_Name'=>'Property2_Value'
+                                              )
+                          );
+````
+
+
+### 3. Existing Product is Edited
+
+You can send information about any new  through this function.
+
+You can disable a product through this function. You can also change stock availability through this function itself.
+
+```php  
+    $amplifyObject->add(
+                            'Email_Address',
+                                        array(
+                                                'Property_Name'=>'Property_Value',
+                                                'Property2_Name'=>'Property2_Value'
+                                              )
+                          );
+````
+
+
+### 4. Order Status Update
+
+Order is automatically created in customer action API. When a product is purchased, orderId is to be passed.
+
+This function helps you updating orderStatus.
+
+```php  
+    $amplifyObject->updateOrderStatus( orderId, orderStatus);
+````
+
+
 FAQs
 -----
 ### 1. Can I send an event without sending properties?
