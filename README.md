@@ -134,6 +134,42 @@ A customer can have following action with products. Replace them from ‘action_
 8. removed_from_cart
 
 
+Example
+```php  
+    $amplifyObject->customerAction(
+                            'sandeep@getamplify.com',
+                             products => array(
+                                         '0' => array(
+                                                            productId => 'xxx',
+                                                            sku =>  'xxx', //optional
+                                                            productTitle => 'xxx', //optional
+                                                            price => 'xxx',
+                                                            specialPrice => 'xxx', //optional
+                                                            status => 'xxx', //optional
+                                                            stockAvailability => 'xxx',
+                                                            pageURL => 'xxx', //optional
+                                                            pictureURL => 'xxx', //optional
+                                                            currency => 'xxx',  //optional
+                                                            orderId => 'xxx' //compulsory when action_name is purchased
+                                                        ),
+                                        '1' => array(
+                                                            productId => 'xxx',
+                                                            sku =>  'xxx', //optional
+                                                            productTitle => 'xxx', //optional
+                                                            price => 'xxx',
+                                                            specialPrice => 'xxx', //optional
+                                                            status => 'xxx', //optional
+                                                            stockAvailability => 'xxx',
+                                                            pageURL => 'xxx', //optional
+                                                            pictureURL => 'xxx', //optional
+                                                            currency => 'xxx',  //optional
+                                                            orderId => 'xxx' //compulsory when action_name is purchased
+                                                        )
+                                    )
+                        );
+````
+
+
 FAQs
 -----
 ### 1. Can I send an event without sending properties?
